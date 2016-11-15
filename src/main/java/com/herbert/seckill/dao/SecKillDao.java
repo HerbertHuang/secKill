@@ -12,13 +12,18 @@ import java.util.Map;
  */
 public interface SecKillDao {
 
-    public int reduceNumber(@Param("seckillId") long seckillId, @Param("killTime")Date killTime);
+    /**
+     * 减库存
+     * @param seckillId
+     * @param killTime
+     * @return 如果影响行数>1,表示减库存数量
+     */
+    int reduceNumber(@Param("seckillId") long seckillId, @Param("killTime") Date killTime);
 
-    public Seckill queryById(long seckillId);
+    Seckill queryById(long seckillId);
 
-    public List<Seckill> queryAll(int offset, int limit);
+    List<Seckill> queryAll(@Param("offset") int offset, @Param("limit") int limit);
 
-    public void killByProcedure(Map<String, Object> paramMap);
+    //void killByProcedure(Map<String, Object> paramMap);
 
-    public void aa();
 }

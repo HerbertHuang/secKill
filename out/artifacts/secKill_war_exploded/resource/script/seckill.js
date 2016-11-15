@@ -89,9 +89,9 @@ var seckill = {
                 var killPhoneModal = $('#killPhoneModal');
                 console.log('killPhoneModal' + killPhoneModal);
                 killPhoneModal.modal({
-                    show: true
-                    //backdrop: 'static',
-                    //keyboard: false
+                    show: true,
+                    backdrop: 'static',
+                    keyboard: false
                 });
                 $('#killPhoneKey').attr('disabled', false);
                 console.log('end');
